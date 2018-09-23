@@ -85,6 +85,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             longitudeTextView.setText("Γεωγρ. Μήκος : " + longitude);
 
             String FullAddress = get_myFullAddress(latitude, longitude);
+            if (FullAddress == null || FullAddress.isEmpty()) {
+                FullAddress = "Εκεί που κανένας δεν θα ήθελε να είναι!";
+            }
             fullAddressTextView.setText(FullAddress);
 
         }
